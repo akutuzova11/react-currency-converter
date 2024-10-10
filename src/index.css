@@ -1,1 +1,17 @@
+html {
+    box-sizing: border-box;
+}
 
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url("../src/assets/currency_background.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    font-family: 'Aleo', serif;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+}
