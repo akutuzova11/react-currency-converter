@@ -22,12 +22,12 @@ const Form = () => {
 
   const handleCurrencyChange = (e) => {
     setCurrency(e.target.value);
-    setResult(null); // Clear the result
+    setResult(null);
   };
 
   const handleAmountChange = (e) => {
     setAmount(parseFloat(e.target.value));
-    setResult(null); // Clear the result
+    setResult(null);
   };
 
   return (
@@ -76,8 +76,8 @@ const Form = () => {
         </button>
       </fieldset>
       <div className="form__dateInfo">
-          <span> &#9432; Exchange rate of: 10 Oct 2024</span>
-        </div>
+        <span> &#9432; Exchange rate of: 10 Oct 2024</span>
+      </div>
     </form>
   );
 };
