@@ -6,8 +6,9 @@ html {
     box-sizing: inherit;
 }
 
+
 body {
-    background-image: url("../src/assets/currency_background.jpg");
+    background-image: url("../public/assets/currency_background.jpg");
     display: flex;
     justify-content: space-around;
     align-items: center;
