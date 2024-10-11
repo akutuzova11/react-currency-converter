@@ -75,6 +75,9 @@ const Form = () => {
           Calculate
         </button>
       </fieldset>
+      <div className="form__dateInfo">
+          <span> &#9432; Exchange rate of: 10 Oct 2024</span>
+        </div>
     </form>
   );
 };
