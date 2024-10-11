@@ -8,7 +8,7 @@ Convert from PLN to EUR, USD, CHF, and GBP with just a few clicks. Enjoy hassle-
 
 ## Demo
 
-https://akutuzova11.github.io/react-to-do-list/
+https://akutuzova11.github.io/react-currency-converter/
 
 ## Built with
 
