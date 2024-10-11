@@ -26,7 +26,7 @@ const Form = () => {
         <legend className="form__legend">Currency Converter</legend>
         <p>
           <label>
-            <span className="form__labelText">Currency: </span>
+            <span className="form__labelText">Currency:</span>
             <select
               className="form__field"
               value={currency}
@@ -43,7 +43,7 @@ const Form = () => {
         </p>
         <p>
           <label>
-            <span className="form__labelText">Amount in PLN: </span>
+            <span className="form__labelText">Amount in PLN:</span>
             <input
               className="form__field"
               id="amount-input"
@@ -58,8 +58,8 @@ const Form = () => {
           </label>
         </p>
         <p>
-          <span className="form__labelText">Result: </span>
-          <span className="form__result js-result">{result || ""}</span>
+          <span className="form__labelText">Result:</span>
+          <span className="form__result">{result || ""}</span>
         </p>
         <button className="button" type="submit">
           Calculate
