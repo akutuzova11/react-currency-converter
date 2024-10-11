@@ -20,6 +20,16 @@ const Form = () => {
     setResult(`${convertedAmount.toFixed(2)} ${currency}`);
   };
 
+  const handleCurrencyChange = (e) => {
+    setCurrency(e.target.value);
+    setResult(null); // Clear the result
+  };
+
+  const handleAmountChange = (e) => {
+    setAmount(parseFloat(e.target.value));
+    setResult(null); // Clear the result
+  };
+
   return (
     <form className="form" onSubmit={onFormSubmit}>
       <fieldset className="form__fieldset">
@@ -32,7 +42,7 @@ const Form = () => {
               value={currency}
               name="currency"
               id="currency-select"
-              onChange={(e) => setCurrency(e.target.value)}
+              onChange={handleCurrencyChange}
             >
               <option value="EUR">EUR</option>
               <option value="USD">USD</option>
@@ -53,7 +63,7 @@ const Form = () => {
               min="1"
               step="any"
               required
-              onChange={(e) => setAmount(parseFloat(e.target.value))}
+              onChange={handleAmountChange}
             />
           </label>
         </p>
