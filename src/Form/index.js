@@ -1,18 +1,13 @@
 import React, { useState } from "react";
 import "./form.css";
 import "./button.css";
+import Result from "../Result/index";
+import conversionRates from "./conversionRates";
 
 const Form = () => {
   const [currency, setCurrency] = useState("EUR");
   const [amount, setAmount] = useState(0);
   const [result, setResult] = useState(null);
-
-  const conversionRates = {
-    EUR: 4.34,
-    USD: 4.03,
-    CHF: 4.57,
-    GBP: 4.93,
-  };
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -67,10 +62,7 @@ const Form = () => {
             />
           </label>
         </p>
-        <p>
-          <span className="form__labelText">Result:</span>
-          <span className="form__result">{result || ""}</span>
-        </p>
+        <Result result={result} />
         <button className="button" type="submit">
           Calculate
         </button>
