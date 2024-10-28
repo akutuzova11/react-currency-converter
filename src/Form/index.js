@@ -39,10 +39,10 @@ const Form = () => {
               id="currency-select"
               onChange={handleCurrencyChange}
             >
-              <option value="EUR">EUR</option>
-              <option value="USD">USD</option>
-              <option value="CHF">CHF</option>
-              <option value="GBP">GBP</option>
+              <option>EUR</option>
+              <option>USD</option>
+              <option>CHF</option>
+              <option>GBP</option>
             </select>
           </label>
         </p>
