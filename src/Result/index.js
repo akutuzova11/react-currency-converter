@@ -1,4 +1,4 @@
-import "./result.css"
+import "./result.css";
 
 const Result = ({ result }) => {
   return (
