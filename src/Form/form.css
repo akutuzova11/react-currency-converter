@@ -21,7 +21,6 @@
 
 .form__labelText {
     margin: auto;
-
 }
 
 .form__field {
@@ -72,25 +71,6 @@
     .form__fieldset {
         margin: 0 auto;
         padding: 10px;
-    }
-}
-
-.form__result {
-    color: rgb(8, 213, 213);
-    font-size: 2.5rem;
-    display: block;
-    min-width: 100px;
-    text-align: center;
-    margin-top: 10px;
-    min-height: 50px;
-    white-space: nowrap;
-
-}
-
-@media (max-width: 768px) {
-    .form__result {
-        font-size: 1.5rem;
-        min-height: 40px;
     }
 }
 
