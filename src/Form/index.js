@@ -3,6 +3,7 @@ import "./form.css";
 import "./button.css";
 import Result from "../Result/index";
 import conversionRates from "./conversionRates";
+import Clock from "../Clock";
 
 const Form = () => {
   const [currency, setCurrency] = useState("EUR");
@@ -27,6 +28,7 @@ const Form = () => {
 
   return (
     <form className="form" onSubmit={onFormSubmit}>
+      <Clock />
       <fieldset className="form__fieldset">
         <legend className="form__legend">Currency Converter</legend>
         <p>
@@ -67,9 +69,6 @@ const Form = () => {
           Calculate
         </button>
       </fieldset>
-      <div className="form__dateInfo">
-        <span> &#9432; Exchange rate of: 10 Oct 2024</span>
-      </div>
     </form>
   );
 };

@@ -39,7 +39,6 @@
 .form__field:hover {
     background-color: #cec6e3;
     transition: background-color 0.5s ease;
-
 }
 
 @media (max-width: 768px) {
@@ -71,19 +70,5 @@
     .form__fieldset {
         margin: 0 auto;
         padding: 10px;
-    }
-}
-
-.form__dateInfo {
-    font-size: 0.7rem;
-    margin-top: 10px;
-    text-align: right;
-    font-style: italic;
-}
-
-@media (max-width: 768px) {
-    .form__dateInfo {
-        font-size: 0.5rem;
-
     }
 }
