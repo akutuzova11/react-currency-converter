@@ -1,10 +1,10 @@
-import "./result.css";
+import {LabelText, Output} from "./styled.js"
 
 const Result = ({ result }) => {
   return (
     <p>
-      <span className="form__labelText">Result:</span>
-      <span className="form__result">{result || ""}</span>
+      <LabelText>Result:</LabelText>
+      <Output>{result || ""}</Output>
     </p>
   );
 };
