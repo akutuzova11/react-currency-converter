@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./style.css";
+import { Wrapper } from "./styled.js";
 
 export const Clock = () => {
   const [date, setDate] = useState(new Date());
@@ -29,9 +29,9 @@ export const Clock = () => {
     .pop();
 
   return (
-    <div className="clock">
+    <Wrapper>
       &#9432; Exchange rate of: {formattedDate}, {timeZone}
-    </div>
+    </Wrapper>
   );
 };
 
