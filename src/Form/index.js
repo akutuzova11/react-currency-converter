@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./form.css";
-import "./button.css";
+import {Button} from "./buttonStyled.js"
 import Result from "../Result/index";
 import conversionRates from "./conversionRates";
 import Clock from "../Clock";
@@ -65,9 +65,9 @@ const Form = () => {
           </label>
         </p>
         <Result result={result} />
-        <button className="button" type="submit">
+        <Button type="submit">
           Calculate
-        </button>
+        </Button>
       </fieldset>
     </form>
   );
