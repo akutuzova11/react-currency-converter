@@ -1,6 +1,13 @@
 import React, { useState } from "react";
-import "./form.css";
-import {Button} from "./buttonStyled.js"
+import {
+  Template,
+  LabelText,
+  Input,
+  Select,
+  Legend,
+  Field,
+} from "./formStyled.js";
+import { Button } from "./buttonStyled.js";
 import Result from "../Result/index";
 import conversionRates from "./conversionRates";
 import Clock from "../Clock";
@@ -27,15 +34,14 @@ const Form = () => {
   };
 
   return (
-    <form className="form" onSubmit={onFormSubmit}>
+    <Template onSubmit={onFormSubmit}>
       <Clock />
-      <fieldset className="form__fieldset">
-        <legend className="form__legend">Currency Converter</legend>
+      <Field>
+        <Legend>Currency Converter</Legend>
         <p>
           <label>
-            <span className="form__labelText">Currency:</span>
-            <select
-              className="form__field"
+            <LabelText>Currency:</LabelText>
+            <Select
               value={currency}
               name="currency"
               id="currency-select"
@@ -45,14 +51,13 @@ const Form = () => {
               <option>USD</option>
               <option>CHF</option>
               <option>GBP</option>
-            </select>
+            </Select>
           </label>
         </p>
         <p>
           <label>
-            <span className="form__labelText">Amount in PLN:</span>
-            <input
-              className="form__field"
+            <LabelText>Amount in PLN:</LabelText>
+            <Input
               id="amount-input"
               name="amount"
               value={amount}
@@ -65,11 +70,9 @@ const Form = () => {
           </label>
         </p>
         <Result result={result} />
-        <Button type="submit">
-          Calculate
-        </Button>
-      </fieldset>
-    </form>
+        <Button type="submit">Calculate</Button>
+      </Field>
+    </Template>
   );
 };
 
