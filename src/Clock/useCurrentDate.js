@@ -12,22 +12,5 @@ export const useCurrentDate = () => {
     };
   }, []);
 
-  const formattedDate = date.toLocaleString(undefined, {
-    weekday: "long",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    day: "numeric",
-    month: "long",
-  });
-
-  const timeZone = date
-    .toLocaleString(undefined, { timeZoneName: "short" })
-    .split(" ")
-    .pop();
-
-  return {
-    formattedDate,
-    timeZone,
-  };
+  return date;
 };
