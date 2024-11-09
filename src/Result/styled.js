@@ -5,8 +5,8 @@ export const LabelText = styled.span`
 `;
 
 export const Output = styled.span`
-  color: rgb(8, 213, 213);
-  font-size: 2.5rem;
+  color: ${({theme})=>theme.colors.text};
+  font-size: ${({theme})=> theme.fontSize.large};
   display: block;
   min-width: 100px;
   text-align: center;
@@ -14,8 +14,8 @@ export const Output = styled.span`
   min-height: 50px;
   white-space: nowrap;
 
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
+  @media (max-width: ${({theme})=>theme.breakpoint.mobile}px) {
+    font-size: ${({theme})=> theme.fontSize.medium};
     min-height: 40px;
   }
 `;
