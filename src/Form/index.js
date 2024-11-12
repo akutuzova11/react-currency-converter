@@ -6,32 +6,49 @@ import {
   Select,
   Legend,
   Field,
+  LoadingStatus,
+  LoadingImageStyled,
+  ErrorStatus,
+  ErrorImageStyled,
 } from "./formStyled.js";
 import { Button } from "./buttonStyled.js";
 import Result from "../Result/index";
-import conversionRates from "./conversionRates";
 import Clock from "../Clock";
+import { Loading } from "../Loading";
+import { useConversionRates } from "./useConversionRates.js";
+import ErrorImage from "../error.jpg";
+import LoadingGif from "../Bean_Eater.gif"
 
 const Form = () => {
   const [currency, setCurrency] = useState("EUR");
   const [amount, setAmount] = useState(0);
   const [result, setResult] = useState(null);
+  const conversionRates = useConversionRates();
+  const [isErrorReady, setIsErrorReady] = useState(false);
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    const convertedAmount = amount / conversionRates[currency];
+    const rate = conversionRates.rates[currency].value;
+    const convertedAmount = amount / rate;
     setResult(`${convertedAmount.toFixed(2)} ${currency}`);
   };
 
-  const handleCurrencyChange = (e) => {
-    setCurrency(e.target.value);
-    setResult(null);
-  };
+  if (conversionRates.status === "loading") {
+    return (
+      <LoadingStatus>
+        Just a moment ...
+        <LoadingImageStyled src={LoadingGif} alt="Loading..." />
+      </LoadingStatus>
+    );
+  }
 
-  const handleAmountChange = (e) => {
-    setAmount(parseFloat(e.target.value));
-    setResult(null);
-  };
+  if (conversionRates.status === "error") {
+    return (
+      <ErrorStatus style={{ visibility: isErrorReady ? "visible" : "hidden" }}>
+        Oops! Something went wrong. Please try again.<ErrorImageStyled src={ErrorImage} alt="Error" onLoad={() => setIsErrorReady(true)}/>
+      </ErrorStatus>
+    );
+  }
 
   return (
     <Template onSubmit={onFormSubmit}>
@@ -45,12 +62,14 @@ const Form = () => {
               value={currency}
               name="currency"
               id="currency-select"
-              onChange={handleCurrencyChange}
+              onChange={({ target }) => setCurrency(target.value)}
             >
-              <option>EUR</option>
-              <option>USD</option>
-              <option>CHF</option>
-              <option>GBP</option>
+              {conversionRates.rates &&
+                Object.keys(conversionRates.rates).map((currency) => (
+                  <option key={currency} value={currency}>
+                    {currency}
+                  </option>
+                ))}
             </Select>
           </label>
         </p>
@@ -65,7 +84,7 @@ const Form = () => {
               min="1"
               step="any"
               required
-              onChange={handleAmountChange}
+              onChange={({ target }) => setAmount(target.value)}
             />
           </label>
         </p>
