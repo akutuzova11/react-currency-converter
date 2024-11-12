@@ -18,7 +18,7 @@ import { Loading } from "./loading.js";
 import { useConversionRates } from "./useConversionRates.js";
 import ErrorImage from "../error.jpg";
 import LoadingGif from "../Bean_Eater.gif"
-import { TimeUpdatedConversionRates } from "./timeUpdatedConversionRates.js";
+import { TimeUpdatedConversionRates } from "../UpdatedTime/timeUpdatedConversionRates.js";
 
 const Form = () => {
   const [currency, setCurrency] = useState("EUR");
