@@ -20,7 +20,7 @@ export const Button = styled.button`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    padding: 10px 80px;
+    padding: 10px;
     font-size: ${({ theme }) => theme.fontSize.small};
   }
 `;

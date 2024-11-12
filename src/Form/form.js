@@ -14,10 +14,9 @@ import {
 import { Button } from "./buttonStyled.js";
 import Result from "../Result/index";
 import Clock from "../Clock/index.js";
-import { Loading } from "./loading.js";
+import Loading from "../Loading/loading.js";
 import { useConversionRates } from "./useConversionRates.js";
 import ErrorImage from "../error.jpg";
-import LoadingGif from "../Bean_Eater.gif"
 import { TimeUpdatedConversionRates } from "../UpdatedTime/timeUpdatedConversionRates.js";
 
 const Form = () => {
@@ -35,18 +34,18 @@ const Form = () => {
   };
 
   if (conversionRates.status === "loading") {
-    return (
-      <LoadingStatus>
-        Just a moment ...
-        <LoadingImageStyled src={LoadingGif} alt="Loading..." />
-      </LoadingStatus>
-    );
+    return <Loading />;
   }
 
   if (conversionRates.status === "error") {
     return (
       <ErrorStatus style={{ visibility: isErrorReady ? "visible" : "hidden" }}>
-        Oops! Something went wrong. Please try again.<ErrorImageStyled src={ErrorImage} alt="Error" onLoad={() => setIsErrorReady(true)}/>
+        Oops! Something went wrong. Please try again.
+        <ErrorImageStyled
+          src={ErrorImage}
+          alt="Error"
+          onLoad={() => setIsErrorReady(true)}
+        />
       </ErrorStatus>
     );
   }

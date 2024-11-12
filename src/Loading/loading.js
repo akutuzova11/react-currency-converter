@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import LoadingGif from "../Bean_Eater.gif"
+import LoadingGif from "../Bean_Eater.gif";
+import { LoadingImageStyled, LoadingStatus } from "./loadingStyled";
 
 export const Loading = () => {
   const [showGif, setShowGif] = useState(false);
@@ -15,6 +16,11 @@ export const Loading = () => {
     };
   }, []);
   return (
-    <div>{showGif && <img src={LoadingGif} alt="Loading..." />}</div>
+    <LoadingStatus>
+      Just a moment ...
+      {showGif && <LoadingImageStyled src={LoadingGif} alt="Loading..." />}
+    </LoadingStatus>
   );
 };
+
+export default Loading;
