@@ -12,12 +12,45 @@ https://akutuzova11.github.io/react-currency-converter/
 
 ## Built with
 
-  - HTML
-  - CSS
-  - BEM
-  - JS ES6+
-  - JSX
-  - REACT
+### Languages & Libraries
+- **HTML**
+- **CSS**
+- **JavaScript (ES6+)**
+- **JSX**
+- **React**
+
+### API & Data Fetching
+- **API** for retrieving data
+- **Async/Await** for handling asynchronous code
+- **Axios** for HTTP requests
+
+### React Features
+- **React Hooks:**
+  - `useState`
+  - `useEffect`
+- **Custom Hooks:**
+  - `useCurrentDate`
+  - `useConversionRates`
+
+### Error Handling
+- **Error Handling Techniques:**
+  - `try/catch` for handling exceptions
+  - `setTimeout` for timed functions
+
+### Styling
+- **Styled Components:**
+  - `GlobalStyle`
+  - `Theme`
+- **Normalize.css** for cross-browser consistency
+
+### Layout & Responsiveness
+- **CSS Layout Techniques:**
+  - Flexbox
+- **Responsive Design:**
+  - Media Queries
+
+### Additional Features
+- **Immutability** practices to ensure state consistency  
 
 ## Usage
 
