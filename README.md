@@ -4,7 +4,7 @@ This web application is your go-to tool for quick and easy currency conversions.
 
 Convert from PLN to EUR, USD, CHF, and GBP with just a few clicks. Enjoy hassle-free conversions every time!
 
-![](https://github.com/akutuzova11/react-currency-converter/blob/main/public/assets/currency_converter_gif.gif)
+![](https://github.com/akutuzova11/react-currency-converter/blob/main/public/assets/readmi.gif)
 
 ## Demo
 
