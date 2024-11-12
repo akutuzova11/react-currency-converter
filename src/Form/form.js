@@ -13,11 +13,12 @@ import {
 } from "./formStyled.js";
 import { Button } from "./buttonStyled.js";
 import Result from "../Result/index";
-import Clock from "../Clock";
-import { Loading } from "../Loading";
+import Clock from "../Clock/index.js";
+import { Loading } from "./loading.js";
 import { useConversionRates } from "./useConversionRates.js";
 import ErrorImage from "../error.jpg";
 import LoadingGif from "../Bean_Eater.gif"
+import { TimeUpdatedConversionRates } from "./timeUpdatedConversionRates.js";
 
 const Form = () => {
   const [currency, setCurrency] = useState("EUR");
@@ -89,6 +90,7 @@ const Form = () => {
           </label>
         </p>
         <Result result={result} />
+        <TimeUpdatedConversionRates conversionRates={conversionRates} />
         <Button type="submit">Calculate</Button>
       </Field>
     </Template>
