@@ -4,7 +4,7 @@ import { useCurrentDate } from "./useCurrentDate.js";
 export const Clock = () => {
   const date = useCurrentDate();
 
-  const formattedDate = date.toLocaleString(undefined, {
+  const formattedDate = date.toLocaleDateString(undefined, {
     weekday: "long",
     hour: "2-digit",
     minute: "2-digit",
@@ -14,7 +14,7 @@ export const Clock = () => {
   });
 
   const timeZone = date
-    .toLocaleString(undefined, { timeZoneName: "short" })
+    .toLocaleTimeString(undefined, { timeZoneName: "short" })
     .split(" ")
     .pop();
 
