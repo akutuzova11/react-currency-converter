@@ -78,8 +78,6 @@ export const Field = styled.fieldset`
   }
 `;
 
-
-
 export const ErrorStatus = styled.div`
   color: ${({ theme }) => theme.colors.red};
   padding: 20px;
@@ -94,7 +92,7 @@ export const ErrorStatus = styled.div`
   font-size: ${({ theme }) => theme.fontSize.medium};
   font-weight: bold;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   gap: 10px;
 
@@ -109,6 +107,6 @@ export const ErrorImageStyled = styled.img`
   margin: 10px 0;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    width: 300px; 
+    width: 300px;
   }
 `;

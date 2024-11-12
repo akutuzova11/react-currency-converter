@@ -1,4 +1,4 @@
-import Form from "./Form/form"
+import Form from "./Form/form";
 
 function App() {
   return <Form />;

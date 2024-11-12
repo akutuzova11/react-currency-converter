@@ -18,7 +18,6 @@ export const Clock = () => {
     .split(" ")
     .pop();
 
-
   return (
     <Wrapper>
       &#9432; Exchange rate of: {formattedDate} {timeZone}

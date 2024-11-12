@@ -5,7 +5,7 @@ export const Button = styled.button`
   margin-bottom: 20px;
   padding: 10px 100px;
   border-radius: 10px;
-  border: 2px solid ${({theme})=> theme.colors.primary};
+  border: 2px solid ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.buttonText};
   cursor: pointer;

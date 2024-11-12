@@ -1,4 +1,4 @@
-import {LabelText, Output} from "./styled.js"
+import { LabelText, Output } from "./styled.js";
 
 const Result = ({ result }) => {
   return (

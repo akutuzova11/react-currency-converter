@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LoadingStatus = styled.div`
-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary};
   padding: 20px;
   text-align: center;
   width: 500px;
@@ -14,7 +14,7 @@ color: ${({ theme }) => theme.colors.primary};
   font-weight: bold;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-  width: 300px;
+    width: 300px;
     font-size: ${({ theme }) => theme.fontSize.small};
   }
 `;
