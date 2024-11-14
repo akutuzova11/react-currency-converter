@@ -15,6 +15,7 @@ export const Loading = () => {
       clearTimeout(intervalId);
     };
   }, []);
+
   return (
     <LoadingStatus>
       Just a moment ...
