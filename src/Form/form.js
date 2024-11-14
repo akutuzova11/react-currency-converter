@@ -29,7 +29,7 @@ const Form = () => {
   const onFormSubmit = (event) => {
     event.preventDefault();
     const rate = conversionRates.rates[currency].value;
-    const convertedAmount = amount / rate;
+    const convertedAmount = amount * rate;
     setResult(`${convertedAmount.toFixed(2)} ${currency}`);
   };
 
