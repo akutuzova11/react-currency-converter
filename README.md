@@ -4,7 +4,7 @@ This web application is your go-to tool for quick and easy currency conversions.
 
 Convert from PLN to EUR, USD, GBP, CHF, AED, AUD, CNY, CZK, DKK, HKD, HUF, JPY, MXN, NOK, and NZD with just a few clicks. Enjoy hassle-free conversions every time!
 
-![](https://github.com/akutuzova11/react-currency-converter/blob/main/public/assets/readmi_gif.gif)
+![](https://github.com/akutuzova11/react-currency-converter/blob/main/readmi_gif.gif)
 
 ## Demo
 
